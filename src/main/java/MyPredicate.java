@@ -17,8 +17,16 @@ public class MyPredicate {
 //        BiPredicate<String,Integer> numEqualStr = (a,b) -> Integer.parseInt(a) == b;
 //        System.out.println(numEqualStr.test("11", 10));
 
-        BiPredicate<Integer,Integer> ageCompare = (age1, age2) -> age1 > age2;
-        System.out.println(ageCompare.test(22, 18));
+//        BiPredicate<Integer,Integer> ageCompare = (age1, age2) -> age1 > age2;
+//        System.out.println(ageCompare.test(22, 18));
+
+        System.out.println(new BiPredicate<Integer, Integer>() {
+
+            @Override
+            public boolean test(Integer age1, Integer age2) {
+                return age1 > age2;
+            }
+        }.test(20, 25));
     }
 }
 
