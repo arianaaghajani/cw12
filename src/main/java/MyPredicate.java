@@ -14,8 +14,11 @@ public class MyPredicate {
 //        Predicate<LocalDate> moreThan18 = d -> (LocalDate.now().getYear() - d.getYear())>18;
 //        System.out.println(moreThan18.test(LocalDate.parse("1900-11-27")));
 
-        BiPredicate<String,Integer> numEqualStr = (a,b) -> Integer.parseInt(a) == b;
-        System.out.println(numEqualStr.test("11", 10));
+//        BiPredicate<String,Integer> numEqualStr = (a,b) -> Integer.parseInt(a) == b;
+//        System.out.println(numEqualStr.test("11", 10));
+
+        BiPredicate<Integer,Integer> ageCompare = (age1, age2) -> age1 > age2;
+        System.out.println(ageCompare.test(22, 18));
     }
 }
 
