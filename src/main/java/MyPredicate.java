@@ -1,6 +1,8 @@
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class MyPredicate {
     public static void main(String[] args) {
@@ -20,13 +22,20 @@ public class MyPredicate {
 //        BiPredicate<Integer,Integer> ageCompare = (age1, age2) -> age1 > age2;
 //        System.out.println(ageCompare.test(22, 18));
 
-        System.out.println(new BiPredicate<Integer, Integer>() {
+//        System.out.println(new BiPredicate<Integer, Integer>() {
+//
+//            @Override
+//            public boolean test(Integer age1, Integer age2) {
+//                return age1 > age2;
+//            }
+//        }.test(20, 25));
 
-            @Override
-            public boolean test(Integer age1, Integer age2) {
-                return age1 > age2;
-            }
-        }.test(20, 25));
+//         Comparator<Integer> integerComparator = Integer::compareTo;
+//        System.out.println(integerComparator.compare(20, 22));
+
+        //10
+        Supplier<LocalDate> date = () -> LocalDate.now();
+        System.out.println(date.get());
     }
 }
 
