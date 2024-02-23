@@ -1,8 +1,6 @@
 import java.time.LocalDate;
 import java.util.Comparator;
-import java.util.function.BiPredicate;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class MyPredicate {
     public static void main(String[] args) {
@@ -32,10 +30,24 @@ public class MyPredicate {
 
 //         Comparator<Integer> integerComparator = Integer::compareTo;
 //        System.out.println(integerComparator.compare(20, 22));
-
         //10
-        Supplier<LocalDate> date = () -> LocalDate.now();
-        System.out.println(date.get());
+//        Supplier<LocalDate> date = () -> LocalDate.now();
+//        System.out.println(date.get());
+
+//        int num = 5;
+//        char ascii = (char) (num + '0');
+//        System.out.println("ASCII code of " + num + " is: " + (int) ascii);
+//
+//        Function<Integer,Integer> getAscii = n -> (int) ((char)(n + '0'));
+//        System.out.println(getAscii.apply(5));
+
+//        Function<Integer,Integer> getNumber = n -> n -48;
+//        System.out.println(getNumber.apply(53));
+
+//        BiFunction<String,String,String> person = (a,b) -> a+ " "+ b;
+//        System.out.println(person.apply("ariana", "aghajani"));
+
+
     }
 }
 
